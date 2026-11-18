@@ -1,0 +1,11 @@
+class AppError extends Error {
+  constructor(message, { statusCode = 500, code = 'INTERNAL_ERROR', expose = false } = {}) {
+    super(message);
+    this.name = 'AppError';
+    this.statusCode = statusCode;
+    this.code = code;
+    this.expose = expose;
+  }
+}
+
+export default AppError;
